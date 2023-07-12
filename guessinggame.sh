@@ -8,9 +8,11 @@ function filecounter
 count=$(ls | wc -l)
 }
 
-filecounter
 
-while [[ $count -gt 0 ]]
+function guessing
+{
+
+while true
 do
  read guess
  
@@ -28,3 +30,7 @@ do
    echo "Wrong format. Try again"
  fi
 done
+}
+
+filecounter
+guessing
